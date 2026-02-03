@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  lab-server:
+    build: ./LabServer
+    ports: 
+      - '5000:5000'
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LAB_DB_PATH=Data Source=C:\Users\saiki\Documents\dotnet\lab_inventory.db
+# The Management Dashboard API
+  lab-dashboard:
+    build: ./LabDashboard
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LAB_DB_PATH=Data Source=C:\Users\saiki\Documents\dotnet\lab_inventory.db
+    depends_on:
+      - lab-server
+      # The Local Monitoring Agent
+  lab-agent:
+    build: ./LabAgent
+    depends_on:
+      - lab-server
+    environment:
+      - SERVER_IP=lab-server

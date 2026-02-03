@@ -1,0 +1,69 @@
+## Visual Studio / .NET build artifacts
+.vs/
+.vscode/
+.idea/
+
+# Build directories
+[Bb]in/
+[Oo]bj/
+**/bin/
+**/obj/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono
+*.pidb
+*.mdb
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+packages.config
+
+# Visual Studio code coverage and test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish outputs
+publish/
+*.Publish.xml
+*.publishsettings
+*.deploy.cmd
+
+# IDE and editor files
+*.vspscc
+*.vssscc
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker overrides
+docker-compose.override.yml
+
+# Rider and IDE caches
+.idea/
+
+# Generated files
+project.assets.json
+*.nupkg
